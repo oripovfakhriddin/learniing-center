@@ -8,10 +8,10 @@
 #learning__types {
   margin-top: 40px;
   .learning__title {
-      color: aliceblue;
-      text-align: center;
-      font-size: 30px;
-      width: 100%;
+    color: aliceblue;
+    text-align: center;
+    font-size: 30px;
+    width: 100%;
     margin-bottom: 30px;
   }
   .learning__types__list {
@@ -20,5 +20,20 @@
   }
   .learning__type__item {
     margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 910px) {
+  .learning__types__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media only screen and (max-width: 660px) {
+  .learning__types__list {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr) !important;
+    row-gap: 20px;
   }
 }
