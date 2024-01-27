@@ -1,0 +1,24 @@
+.carouse__box {
+  img {
+    width: 100% !important;
+    height: 70vh !important;
+  }
+}
+
+#learning__types {
+  margin-top: 40px;
+  .learning__title {
+      color: aliceblue;
+      text-align: center;
+      font-size: 30px;
+      width: 100%;
+    margin-bottom: 30px;
+  }
+  .learning__types__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .learning__type__item {
+    margin: 0 auto;
+  }
+}
