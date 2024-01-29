@@ -2,11 +2,8 @@ import { Fragment } from "react";
 import Carousel from "react-multi-carousel";
 import { Link } from "react-router-dom";
 
-import { Card } from "antd";
-const { Meta } = Card;
-
 import OfflineCourseCardImage from "../../../assets/icons/offline-study.png";
-import OnlineCourseCardImage from "../../../assets/icons/online-study.jfif";
+import OnlineCourseCardImage from "../../../assets/icons/online-course.png";
 import SelfStudyCardImage from "../../../assets/icons/self-study.png";
 
 import "./style.scss";
@@ -48,7 +45,7 @@ const HomePage = () => {
   };
   return (
     <Fragment>
-      <section>
+      <section id="hero">
         <Carousel
           additionalTransfrom={0}
           arrows
@@ -117,47 +114,30 @@ const HomePage = () => {
         </Carousel>
       </section>
       <section id="learning__types">
-        <h1 className="learning__title">
-          {`O'qish turlari`}
-        </h1>
+        <h1 className="learning__title">{`O'qish turlari`}</h1>
         <ul className="learning__types__list">
           <li className="learning__type__item">
-            <Link to="self-study">
-              <Card
-                hoverable
-                style={{
-                  width: 240,
-                }}
-                cover={<img alt="example" src={SelfStudyCardImage} />}
-              >
-                <Meta title="Self Study" description="Juniors team" />
-              </Card>
+            <Link to="verification">
+              <div className="card__image__box">
+                <img src={SelfStudyCardImage} alt="Self Study Image Card" />
+              </div>
+              <h2>{`Mustaqil o'qish uchun kurslar`}</h2>
             </Link>
           </li>
           <li className="learning__type__item">
-            <Link to="offline-course">
-              <Card
-                hoverable
-                style={{
-                  width: 240,
-                }}
-                cover={<img alt="example" src={OfflineCourseCardImage} />}
-              >
-                <Meta title="Offline Course" description="Juniors team" />
-              </Card>
+            <Link to="verification">
+              <div className="card__image__box">
+                <img src={OfflineCourseCardImage} alt="Self Study Image Card" />
+              </div>
+              <h2>Offline kurslar </h2>
             </Link>
           </li>
           <li className="learning__type__item">
-            <Link to="online-course">
-              <Card
-                hoverable
-                style={{
-                  width: 240,
-                }}
-                cover={<img alt="example" src={OnlineCourseCardImage} />}
-              >
-                <Meta title="Online Course" description="Juniors team" />
-              </Card>
+            <Link to="verification">
+              <div className="card__image__box">
+                <img src={OnlineCourseCardImage} alt="Self Study Image Card" />
+              </div>
+              <h2>Online kurslar</h2>
             </Link>
           </li>
         </ul>

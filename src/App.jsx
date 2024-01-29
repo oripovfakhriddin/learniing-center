@@ -6,6 +6,7 @@ import SuperAdminLayout from "./components/layouts/superadmin-layout";
 import UserLayout from "./components/layouts/user-layout";
 import LoginPage from "./pages/Auth/LoginPage";
 import RegisterPage from "./pages/Auth/RegisterPage";
+import VerificationPage from "./pages/Auth/VerificationPage";
 import AboutPage from "./pages/User/AboutPage";
 import ContactUsPage from "./pages/User/ContactUsPage";
 import HomePage from "./pages/User/HomePage";
@@ -25,6 +26,7 @@ function App() {
             <Route path="self-study" element={<SelfStudyPage />} />
             <Route path="offline-course" element={<OfflineCoursePage />} />
             <Route path="online-course" element={<OnlineCoursePage />} />
+            <Route path="verification" element={<VerificationPage />} />
             <Route path="login" element={<LoginPage />} />
             <Route path="register" element={<RegisterPage />} />
           </Route>

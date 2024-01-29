@@ -1,8 +1,10 @@
 .demo-logo {
+  text-align: center;
+  margin: 0 auto;
   .site__logo__link {
     object-fit: cover;
     display: flex;
     gap: 10px;
-    height: 48px;
+    height: 90px;
   }
 }

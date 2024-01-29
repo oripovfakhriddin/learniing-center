@@ -1,44 +1,21 @@
 import {
   Link,
-  NavLink,
+  // NavLink,
   Outlet,
-  useLocation,
+  // useLocation,
   //   useNavigate,
 } from "react-router-dom";
 
-import { Layout, Menu, theme } from "antd";
+import { Layout,  theme } from "antd";
 
 import BackgroudImage from "../../../assets/images/background.jpg";
 import SiteLogoImage from "../../../assets/images/site-logo.png";
 
 const { Header, Content, Footer } = Layout;
-const items = [
-  {
-    key: "",
-    label: <NavLink to="/">Bosh sahifa</NavLink>,
-  },
-  {
-    key: "/about",
-    label: <NavLink to="/about">Haqida</NavLink>,
-  },
-  {
-    key: "/contact",
-    label: <NavLink to="/contact">{`Bog'lanish`}</NavLink>,
-  },
-  {
-    key: "/login",
-    label: <NavLink to="/login">Kirish</NavLink>,
-  },
-  {
-    key: "/register",
-    label: <NavLink to="/register">{`Ro'yhatdan o'tish`}</NavLink>,
-  },
-];
+
 
 import "./style.scss";
 const UserLayout = () => {
-  //   const navigate = useNavigate();
-  const location = useLocation();
   const {
     token: { borderRadiusLG },
   } = theme.useToken();
@@ -49,6 +26,7 @@ const UserLayout = () => {
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
+          height: 100
         }}
       >
         <div className="demo-logo">
@@ -56,7 +34,7 @@ const UserLayout = () => {
             <img src={SiteLogoImage} alt="Site Logo" />
           </Link>
         </div>
-        <Menu
+        {/* <Menu
           theme="dark"
           mode="horizontal"
           defaultSelectedKeys={[location.pathname]}
@@ -66,7 +44,7 @@ const UserLayout = () => {
             minWidth: 0,
             justifyContent: "end",
           }}
-        />
+        /> */}
       </Header>
       <Content
         style={{
@@ -74,7 +52,7 @@ const UserLayout = () => {
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
           backgroundPosition: "50% 50%",
-          padding: "0 48px",
+          padding: "0 0",
         }}
       >
         <div
