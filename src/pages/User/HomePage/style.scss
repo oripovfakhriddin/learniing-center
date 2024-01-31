@@ -42,12 +42,9 @@
       color: aliceblue;
     }
     &:hover {
-      background-color: white;
       transform: scale(1.1, 1.1);
       box-shadow: none;
-      h2 {
-        color: black;
-      }
+      filter: drop-shadow(5px 5px 3px green);
     }
   }
 }

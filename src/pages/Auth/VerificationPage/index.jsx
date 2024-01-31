@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 
 import { yupResolver } from "@hookform/resolvers/yup";
 
+import VerificationIcon from "../../../assets/icons/verification-icon.png";
 import VerificationSchema from "../../../schema/verification";
 
 import "./style.scss";
@@ -22,17 +23,20 @@ const VerificationPage = () => {
     <Fragment>
       <section>
         <div className="container form__container">
-          <h1 className="login__title">Login</h1>
+          <h1 className="login__title">Verification</h1>
+          <div className="verification__icons__box">
+            <img src={VerificationIcon} alt="" />
+          </div>
           <form className="form" onSubmit={handleSubmit(onSubmit)}>
-            <input
-              placeholder="Emailingizni kiriting !"
-              {...register("email")}
-            />
-            {errors.email ? (
-              <p className="text-danger">{errors.email.message}</p>
-            ) : null}
+            <div className="input__box">
+              <input className="input" {...register("email")} required />
+              <span htmlFor="email">Email</span>
+              {errors.email ? (
+                <p className="text-danger">{errors.email.message}</p>
+              ) : null}
+            </div>
             <button className="form__btn" type="submit">
-              Login
+              Tasdiqlash
             </button>
           </form>
         </div>
